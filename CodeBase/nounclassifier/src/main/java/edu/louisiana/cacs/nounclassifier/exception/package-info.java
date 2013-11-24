@@ -1,7 +1,5 @@
 /**
- * 
- */
-/**
+ * Contains custom exception classes which are used for noun classifier.
  * @author rsunkara
  *
  */
