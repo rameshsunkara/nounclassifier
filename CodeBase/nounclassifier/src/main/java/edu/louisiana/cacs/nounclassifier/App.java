@@ -3,11 +3,7 @@ package edu.louisiana.cacs.nounclassifier;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.jena.riot.RDFDataMgr;
-
-import com.hp.hpl.jena.rdf.model.Model;
-
-import edu.louisiana.cacs.nounclassifier.dao.QueryExecutor;
+import edu.louisiana.cacs.nounclassifier.exception.NounClassifierException;
 import edu.louisiana.cacs.nounclassifier.util.Configurator;
 
 /**
@@ -35,7 +31,13 @@ public class App {
 		if (!xConfigurator.loadConfigValues(xPropertiesFilePath))
 			return;
 		
-		String personName = "Aristotle";
+		NounClassifier xNounClassifierObj = new NounClassifier(xConfigurator);
+		try {
+			xNounClassifierObj.execute();
+		} catch (NounClassifierException e) {
+			e.printStackTrace();
+		}
+		/*String personName = "Aristotle";
 
 		String query4 = "SELECT ?desc ?birthPlace ?entityType "
 				+ "WHERE "
@@ -48,7 +50,7 @@ public class App {
 
 		Model model2 = RDFDataMgr.loadModel("sample.nt");
 		System.out.println("Model loaded");
-		QueryExecutor.executeQuery(query4, model2);
+		QueryExecutor.executeQuery(query4, model2);*/
 
 	}
 

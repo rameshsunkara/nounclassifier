@@ -25,11 +25,10 @@ public class PersonQueryMaker {
 	 *            entity type has to be fetched.
 	 * @param p_language
 	 *            - A <code>String</code> representing the language.
-	 * @return xEntityTypeQuery
-	 * 			  - A <code>String</code> representing the query.
+	 * @return xEntityTypeQuery - A <code>String</code> representing the query.
 	 * @version 1.0
 	 */
-	public String getEntityType(String p_personName,String p_language) {
+	public static String getEntityType(String p_personName, String p_language) {
 		String xEntityTypeQuery = "SELECT ?entityType "
 				+ "WHERE "
 				+ "{ "
@@ -47,15 +46,14 @@ public class PersonQueryMaker {
 	 * Makes a query to fetch birth place for the given person name.
 	 * 
 	 * @param p_personName
-	 * 			- A <code>String</code> representing the person name of whose
+	 *            - A <code>String</code> representing the person name of whose
 	 *            birth place has to be fetched.
-	 *  @param p_language
+	 * @param p_language
 	 *            - A <code>String</code> representing the language.
-	 * @return xBirthPlaceQuery
-	 * 			  - A <code>String</code> representing the query.
+	 * @return xBirthPlaceQuery - A <code>String</code> representing the query.
 	 * @version 1.0
 	 */
-	public String getBirthPlace(String p_personName,String p_language) {
+	public static String getBirthPlace(String p_personName, String p_language) {
 		String xBirthPlaceQuery = "SELECT ?birthPlace "
 				+ "WHERE "
 				+ "{ "
@@ -73,15 +71,14 @@ public class PersonQueryMaker {
 	 * Makes a query to fetch death place for the given person name.
 	 * 
 	 * @param p_personName
-	 * 			- A <code>String</code> representing the person name of whose
+	 *            - A <code>String</code> representing the person name of whose
 	 *            death place has to be fetched.
 	 * @param p_language
-	 *            - A <code>String</code> representing the language.          
-	 * @return xDeathPlaceQuery
-	 * 			  - A <code>String</code> representing the query.
+	 *            - A <code>String</code> representing the language.
+	 * @return xDeathPlaceQuery - A <code>String</code> representing the query.
 	 * @version 1.0
 	 */
-	public String getDeathPlace(String p_personName,String p_language) {
+	public static String getDeathPlace(String p_personName, String p_language) {
 		String xDeathPlaceQuery = "SELECT ?deathPlace "
 				+ "WHERE "
 				+ "{ "
@@ -99,15 +96,14 @@ public class PersonQueryMaker {
 	 * Makes a query to fetch description for the given person name.
 	 * 
 	 * @param p_personName
-	 * 			- A <code>String</code> representing the person name of whose
+	 *            - A <code>String</code> representing the person name of whose
 	 *            description has to be fetched.
 	 * @param p_language
 	 *            - A <code>String</code> representing the language.
-	 * @return xPersonDescQuery
-	 * 			  - A <code>String</code> representing the query.
+	 * @return xPersonDescQuery - A <code>String</code> representing the query.
 	 * @version 1.0
 	 */
-	public String getPersonDescription(String p_personName,String p_language) {
+	public static String getDescription(String p_personName, String p_language) {
 		String xPersonDescQuery = "SELECT ?desc "
 				+ "WHERE "
 				+ "{ "
@@ -120,5 +116,4 @@ public class PersonQueryMaker {
 		}
 		return xPersonDescQuery;
 	}
-
 }

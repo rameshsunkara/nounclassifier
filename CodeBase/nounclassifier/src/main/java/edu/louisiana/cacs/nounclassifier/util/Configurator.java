@@ -50,6 +50,12 @@ public class Configurator {
 				+ m_configFile.getProperty("OUTPUT_DIR");
 	}
 
+	public String get_person_data_file() {
+		/*return get_document_input_dir() + File.separator
+				+ m_configFile.getProperty("PERSON_DATA_FILE");*/
+		return m_configFile.getProperty("PERSON_DATA_FILE");
+	}
+	
 	public static void main(String[] args) {
 		Configurator c = new Configurator();
 		m_logger.debug(c.loadConfigValues(System.getProperty("user.dir")
@@ -59,4 +65,6 @@ public class Configurator {
 		m_logger.debug("INPUT DIR:" + c.get_document_input_dir());
 		System.out.println(c.get_document_input_dir());
 	}
+
+	
 }
