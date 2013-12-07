@@ -56,6 +56,16 @@ public class Configurator {
 		return m_configFile.getProperty("PERSON_DATA_FILE");
 	}
 	
+	public String get_location_data_file() {
+		/*return get_document_input_dir() + File.separator
+				+ m_configFile.getProperty("LOCATION_DATA_FILE");*/
+		return m_configFile.getProperty("LOCATION_DATA_FILE");
+	}
+	
+	public String get_disambiguation_data_file(){
+		return m_configFile.getProperty("DISAMBIGUATIONS_FILE");
+	}
+	
 	public static void main(String[] args) {
 		Configurator c = new Configurator();
 		m_logger.debug(c.loadConfigValues(System.getProperty("user.dir")

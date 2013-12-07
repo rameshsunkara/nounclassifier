@@ -4,5 +4,5 @@ import edu.louisiana.cacs.nounclassifier.exception.NounClassifierException;
 
 public interface INounClassifier {
 
-	public void execute() throws NounClassifierException;
+	public void classify() throws NounClassifierException;
 }

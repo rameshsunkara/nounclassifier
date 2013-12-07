@@ -92,6 +92,7 @@ public class PersonQueryMaker {
 		return xDeathPlaceQuery;
 	}
 
+	
 	/**
 	 * Makes a query to fetch description for the given person name.
 	 * 
@@ -116,4 +117,7 @@ public class PersonQueryMaker {
 		}
 		return xPersonDescQuery;
 	}
+
+	
+
 }

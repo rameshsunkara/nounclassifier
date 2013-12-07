@@ -33,7 +33,7 @@ public class App {
 		
 		NounClassifier xNounClassifierObj = new NounClassifier(xConfigurator);
 		try {
-			xNounClassifierObj.execute();
+			xNounClassifierObj.classify();
 		} catch (NounClassifierException e) {
 			e.printStackTrace();
 		}
